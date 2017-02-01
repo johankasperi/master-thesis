@@ -1,0 +1,39 @@
+\documentclass[siggraph]{acmart}
+
+\setcopyright{none}
+\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\pagestyle{plain}
+
+\usepackage{booktabs} % For formal tables
+\usepackage{listings}
+\usepackage{courier}
+
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+
+\begin{document}
+\title{Occlusion in outdoor Augmented Reality using geospatial building data}
+\titlenote{Master Degree Project in Computer Science and Communication.}
+
+\author{Johan Kasperi}
+\affiliation{
+  \institution{KTH Royal Institute of Technology}
+  \city{Stockholm}
+  \country{Sweden}
+}
+\email{kasperi@kth.se}
+
+\begin{abstract}
+Creating physical simulations between virtual and real objects in \textit{Augmented Reality} (AR) is essential for the user experience. Otherwise the user might lose sense of depth, distance and size. One of these simulations is occlusion, meaning that virtual content should be partially or fully occluded if real world objects is in the line-of-sight between the user and the content. The challenge for simulating occlusion is to construct the geometric model of the current AR environment. Earlier studies within the field have all tried to create realistic pixel-perfect occlusion and most of them have either required special depth-sensing hardware or a static predefined environment. This study proposes and evaluates an alternative model-based approach to the problem. It uses geospatial data to construct the geometric model of all the buildings in the current environment, making virtual content occluded by all real buildings in the current environment. This approach made the developed function compatible on non depth-sensing devices and in a dynamic outdoor urban environment. To evaluate the solution it was implemented in an sensor-based AR application visualizing a future building in Stockholm. The effect of the developed function was that the future virtual building was occluded as expected. However, it was not pixel-perfect, meaning that the simulated occlusion was not realistic, but results from the conducted user study said that it fulfilled its goal. A majority of the participants thought that their AR experience got better with the solution activated and that their depth perception improved. But any definite conclusions could not be drawn due to issues with the sensor-based tracking. The result is interesting for the mobile AR field since the great majority of smartphones are not equipped with depth sensors. Using geospatial data for simulating occlusions, or other physical interactions between the virtual and real objects, could then be an efficient enough solution until depth-sensing AR devices get more widely used.
+\end{abstract}
+
+\keywords{Augmented Reality, AR, Occlusion, Physical simulation, Geospatial data, Open Street Maps}
+
+\maketitle
+
+\input{body}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
